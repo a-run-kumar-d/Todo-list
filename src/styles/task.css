@@ -1,0 +1,45 @@
+#ActivedButton{
+    border: var(--secondary-text) 1px solid;
+}
+#ActivedButton:hover {
+    border: rgba(180, 96, 236, 0.7) 2.5px solid;
+}
+.statusButton{
+    height: 1.5rem;
+    width: 1.5rem;
+    background: transparent;
+    border-radius: 50px;
+    border: none;
+}
+#CompletedButton{
+    background: linear-gradient(90deg, rgba(180, 96, 236), rgba(114, 164, 251));
+}
+#tick-icon{
+    height: 0.6rem;
+    width: auto;
+}
+#cross-icon{
+    height: 1rem;
+    width: auto;
+}
+.deleteButton{
+    border: none;
+    background: transparent;
+}
+.taskDetail{
+    color: var(--primary-text);
+    font-weight: 600;
+    width: 28vw;
+}
+.taskBar{
+    background: white;
+    font-size: 0.8rem;
+    height: 3.2rem;
+    border: none;
+    border-bottom: var(--secondary-text) 1px solid;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35vw;
+}

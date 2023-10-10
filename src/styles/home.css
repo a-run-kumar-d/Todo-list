@@ -1,0 +1,88 @@
+.bgContainer{
+    height: 45vh;
+    background: linear-gradient(90deg, rgba(180, 96, 236, 0.7), rgba(114, 164, 251, 0.7)), url("../assets/Hero-Bg.jpg");
+    background-size: cover;
+}
+.homeContainer{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+.heading1{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.inputBox{
+    font-weight: 600;
+    color: var(--primary-text);
+    height: 3.2rem;
+    border: none;
+    padding: 5px 40px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    margin-bottom: 2rem;
+}
+.inputBox:focus{
+    outline: none;
+}
+.inputBox::placeholder{
+    color: var(--secondary-text);
+}
+.subText{
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(59, 58, 58);
+    margin-bottom: 1rem;
+}
+.taskNav{
+    min-width: 30vw;
+    background-color: #fff;
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+}
+.statusUpdater{
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+.sortSection{
+    display: flex;
+    gap: 0.7rem;
+}
+.sortButton{
+    font-weight: 500;
+    color: var(--secondary-text);
+    border: none;
+    background: transparent;
+}
+.sortButton:hover{
+    color: var(--primary-text);
+    font-weight: 700;
+}
+.taskContainer{
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
