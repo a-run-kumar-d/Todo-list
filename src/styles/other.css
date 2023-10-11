@@ -43,3 +43,20 @@
     font-weight: 600;
     font-size: 1rem;
 }
+.alert{
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(201, 7, 7);
+    margin-top: 1.5rem;
+}
+.loginLink{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
