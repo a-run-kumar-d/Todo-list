@@ -44,6 +44,10 @@
     color: var(--primary-text);
     font-weight: 700;
 }
+.activeState{
+    color: rgba(114, 164, 251);
+    font-weight: 700;
+}
 .taskContainer{
     border: none;
     border-radius: 8px;

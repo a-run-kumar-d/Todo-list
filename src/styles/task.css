@@ -31,6 +31,10 @@
     font-weight: 600;
     width: 28vw;
 }
+.completedState{
+    color: var(--secondary-text);
+    text-decoration: line-through;
+}
 .taskBar{
     background: white;
     font-size: 0.8rem;

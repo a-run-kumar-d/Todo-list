@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
+import { useLocalStorage } from "../Hooks/useLocalStorage";
 
 type TaskDataProvidertype = {
     children: ReactNode;
@@ -23,7 +24,7 @@ export function useTaskData(){
 }
 
 export function TaskDataProvider({children}: TaskDataProvidertype){
-    const [tasks, setTasks] = useState<taskType[]>([]);
+    const [tasks, setTasks] = useLocalStorage<taskType[]>("tasks",[]);
     function getTasks(value: string){
         if(value === "active"){
             return tasks.filter(task => task.status === true);
@@ -52,11 +53,13 @@ export function TaskDataProvider({children}: TaskDataProvidertype){
         return task?.status;
     }
     function updateStatus(id: number){
-        tasks.map(task => {
+        const updatedTasks = tasks.map(task => {
             if(task.id === id){
-                task.status = !task.status;
+                return { ...task, status: !task.status };
             }
+            return task;
         })
+        setTasks([...updatedTasks]);
     }
     function deleteMultipleTasks(ids: number[]){
         const newTasks = tasks.filter(task => !ids.includes(task.id));

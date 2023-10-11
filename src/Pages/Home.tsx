@@ -38,9 +38,9 @@ export default function Home() {
                 <div className="taskNav">
                     <div className="statusUpdater">{tasks.length} items lefts</div>
                     <div className="sortSection">
-                        <button className="sortButton" id="allButton" onClick={()=>{handleSort("all")}}>All</button>
-                        <button className="sortButton" id="activeButton" onClick={()=>{handleSort("active")}}>Active</button>
-                        <button className="sortButton" id="completedButton" onClick={()=>{handleSort("completed")}}>Completed</button>
+                        <button className={`sortButton ${sortValue==='all' ?'activeState' : ''}`} id="allButton" onClick={()=>{handleSort("all")}}>All</button>
+                        <button className={`sortButton ${sortValue==='active' ?'activeState' : ''}`} id="activeButton" onClick={()=>{handleSort("active")}}>Active</button>
+                        <button className={`sortButton ${sortValue==='completed' ?'activeState' : ''}`} id="completedButton" onClick={()=>{handleSort("completed")}}>Completed</button>
                     </div>
                     <button className="sortButton" id="clearButton" onClick={() => {
                         const ids = tasks.filter(task => task.status === false).map(task => task.id);
