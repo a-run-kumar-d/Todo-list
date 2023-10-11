@@ -1,13 +1,12 @@
 import "../styles/home.css"
-
+import "../styles/common.css"
 import Task from "../components/Task"
 import { useTaskData } from "../Data/taskDataContext";
 import { useState } from "react";
-import task from "../components/Task";
 
 export default function Home() {
     const [sortValue, setSortValue] = useState("all")
-    const {getTasks, createTask ,deleteTask} = useTaskData();
+    const {getTasks, createTask ,deleteMultipleTasks} = useTaskData();
     const tasks = getTasks(sortValue);
     function handleText(e: React.KeyboardEvent<HTMLInputElement>) {
         if (e.key === "Enter") {
@@ -15,6 +14,10 @@ export default function Home() {
           e.currentTarget.value = "";
         }
       }
+    function handleSort(value: string) {
+        setSortValue(value);
+    }
+
     return (
         <>
         <div className="bgContainer"></div>
@@ -24,6 +27,7 @@ export default function Home() {
             <div className="taskContainer">
                 <div className="taskList">
                     {tasks.map((task)=>{
+                        console.log(task)
                         return(
                         <Task {...task} />
 
@@ -34,16 +38,13 @@ export default function Home() {
                 <div className="taskNav">
                     <div className="statusUpdater">{tasks.length} items lefts</div>
                     <div className="sortSection">
-                        <button className="sortButton" id="allButton" onClick={()=>{setSortValue("all")}}>All</button>
-                        <button className="sortButton" id="activeButton" onClick={()=>{setSortValue("active")}}>Active</button>
-                        <button className="sortButton" id="completedButton" onClick={()=>{setSortValue("completed")}}>Completed</button>
+                        <button className="sortButton" id="allButton" onClick={()=>{handleSort("all")}}>All</button>
+                        <button className="sortButton" id="activeButton" onClick={()=>{handleSort("active")}}>Active</button>
+                        <button className="sortButton" id="completedButton" onClick={()=>{handleSort("completed")}}>Completed</button>
                     </div>
                     <button className="sortButton" id="clearButton" onClick={() => {
-                        tasks.map(task => {
-                            if(task.status === false){
-                                deleteTask(task.id);
-                            }
-                        });
+                        const ids = tasks.filter(task => task.status === false).map(task => task.id);
+                        deleteMultipleTasks(ids);
                     }}>Clear Completed</button>
                 </div>    
             </div>

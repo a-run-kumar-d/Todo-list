@@ -14,6 +14,7 @@ type TaskData = {
     deleteTask: (id: number) => void;
     readStatus: (id: number) => boolean|undefined ;
     updateStatus: (id: number) => void;
+    deleteMultipleTasks: (ids : number[]) => void;
 }
 const taskDataContext = createContext({} as TaskData);
 
@@ -57,8 +58,12 @@ export function TaskDataProvider({children}: TaskDataProvidertype){
             }
         })
     }
+    function deleteMultipleTasks(ids: number[]){
+        const newTasks = tasks.filter(task => !ids.includes(task.id));
+        setTasks([...newTasks]);
+    }
     return(
-        <taskDataContext.Provider value={{getTasks, createTask , deleteTask, readStatus, updateStatus}}>
+        <taskDataContext.Provider value={{getTasks, createTask , deleteTask, readStatus, updateStatus ,deleteMultipleTasks}}>
             {children}
         </taskDataContext.Provider>   
     )
