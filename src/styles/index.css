@@ -10,6 +10,9 @@
     --primary-text : #3B3A3A;
     --secondary-text : #67666E;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 body{
     cursor: pointer;
 }

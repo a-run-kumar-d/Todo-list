@@ -56,7 +56,7 @@
     width: 100%;
     margin-top: 1rem;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: rem;
     font-weight: 600;
     color: var(--secondary-color);
 }

@@ -1,4 +1,5 @@
-.heading1{
+/* Common styles for all screen sizes */
+.heading1 {
     width: 100%;
     font-size: 2rem;
     font-weight: 700;
@@ -6,7 +7,8 @@
     color: #fff;
     margin-bottom: 1rem;
 }
-.subText{
+
+.subText {
     width: 100%;
     margin-top: 2rem;
     text-align: center;
@@ -15,8 +17,8 @@
     color: rgb(59, 58, 58);
     margin-bottom: 1rem;
 }
-.taskNav{
-    min-width: 30vw;
+
+.taskNav {
     background-color: #fff;
     display: flex;
     font-size: 0.8rem;
@@ -26,31 +28,56 @@
     height: 3rem;
     padding: 1rem;
 }
-.statusUpdater{
+
+.statusUpdater {
     font-weight: 500;
     color: var(--secondary-text);
 }
-.sortSection{
+
+.sortSection {
     display: flex;
     gap: 0.7rem;
 }
-.sortButton{
+
+.sortButton {
     font-weight: 500;
     color: var(--secondary-text);
     border: none;
     background: transparent;
 }
-.sortButton:hover{
+
+.sortButton:hover {
     color: var(--primary-text);
     font-weight: 700;
 }
-.activeState{
+
+.activeState {
     color: rgba(114, 164, 251);
     font-weight: 700;
 }
-.taskContainer{
+
+.taskContainer {
     border: none;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+@media (max-width: 768px) {
+    .heading1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .subText {
+        font-size: 0.7rem;
+    }
+
+    .taskNav {
+        font-size: 0.7rem;
+    }
+
+    .sortButton {
+        font-size: 0.7rem;
+    }
 }
