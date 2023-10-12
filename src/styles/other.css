@@ -60,3 +60,26 @@
     font-weight: 600;
     color: var(--secondary-color);
 }
+@media (max-width: 768px) {
+    .loginhead{
+        font-size: 1.5rem;
+    }
+    .loginsubhead{
+        font-size: 0.8rem;
+    }
+    .loginButton{
+        font-size: 1rem;
+    }
+    .alert{
+        font-size: 0.8rem;
+    }
+    .loginLink{
+        font-size: 0.8rem;
+    }
+    #bgLogin {
+        height: 60vh;
+    }
+    #bgSignup {
+        height: 70vh;
+    }
+}

@@ -39,7 +39,8 @@
 .taskBar{
     background: white;
     font-size: 0.8rem;
-    height: 3.2rem;
+    min-height: 3.2rem;
+    max-height: max-content;
     border: none;
     border-bottom: var(--secondary-text) 1px solid;
     padding: 10px 20px;
@@ -47,4 +48,13 @@
     align-items: center;
     justify-content: space-between;
     width: 35vw;
+}
+@media (max-width: 768px) {
+    .taskBar{
+        width: 90vw;
+    }
+    .taskDetail{
+        width: 50vw;
+        font-size: 0.7rem;
+    }
 }
