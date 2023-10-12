@@ -48,7 +48,6 @@ export default function Home() {
                     }}>Clear Completed</button>
                 </div>    
             </div>
-            <div className="subText">Drag and drop to reorder the list</div>   
         </div>
           
         </>

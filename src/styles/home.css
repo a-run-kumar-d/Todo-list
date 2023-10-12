@@ -7,17 +7,6 @@
     color: #fff;
     margin-bottom: 1rem;
 }
-
-.subText {
-    width: 100%;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: rgb(59, 58, 58);
-    margin-bottom: 1rem;
-}
-
 .taskNav {
     background-color: #fff;
     display: flex;
@@ -69,11 +58,6 @@
         font-size: 1.5rem;
         letter-spacing: 0.5rem;
     }
-
-    .subText {
-        font-size: 0.7rem;
-    }
-
     .taskNav {
         font-size: 0.5rem;
     }
